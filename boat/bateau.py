@@ -4,6 +4,7 @@ class Bateau:
         self.colonne=colonne
         self.longueur=longueur
         self.vertical=vertical
+        self.hit="⛵"
     
     @property
     def positions(self):

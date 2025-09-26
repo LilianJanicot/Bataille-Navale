@@ -21,7 +21,8 @@ class Grille:
         maListe=[]
         while i!=len(self.matrice)//self.colonne:
             for j in range(self.colonne):
-                maListe.append((i,j))
+                if self.matrice[(i*self.colonne+j)]=="~":
+                    maListe.append((i,j))
             i+=1
         for x in bateau.positions:
             if x not in maListe:
@@ -31,4 +32,5 @@ class Grille:
             for x in bateau.positions:
                 l,c=x
                 self.matrice[l*self.colonne+c]=hit
+        return ajoutable
         

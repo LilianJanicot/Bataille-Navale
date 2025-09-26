@@ -3,8 +3,8 @@ class Grille:
     def __init__(self,ligne,colonne):
         self.colonne = colonne
         self.matrice = ["~" for i in range(ligne * colonne)]
-    def tirer(self,l,c):
-        self.matrice[l*self.colonne+c]="x"
+    def tirer(self,l,c,touche="x"):
+        self.matrice[l*self.colonne+c]=touche
     def __str__(self):
         monString=""
         for l in range(len(self.matrice)//self.colonne):

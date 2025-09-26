@@ -27,4 +27,27 @@ def test_coule():
     maGrille.tirer(0,1)
     maGrille.tirer(0,2)
     assert monBateau.coule(maGrille)==True
-    
+
+def test_porteavion():
+    from bateau import PorteAvion
+    monPorteAvion=PorteAvion(1,2)
+    assert type(monPorteAvion) is PorteAvion
+    assert monPorteAvion.longueur == 4
+
+def test_croiseur():
+    from bateau import Croiseur
+    monCroiseur=Croiseur(1,2)
+    assert type(monCroiseur) is Croiseur
+    assert monCroiseur.longueur == 3
+
+def test_torpilleur():
+    from bateau import Torpilleur
+    monTorpilleur=Torpilleur(1,2)
+    assert type(monTorpilleur) is Torpilleur
+    assert monTorpilleur.longueur == 2
+
+def test_sousmarin():
+    from bateau import Sousmarin
+    monSousmarin=Sousmarin(1,2)
+    assert type(monSousmarin) is Sousmarin
+    assert monSousmarin.longueur == 2

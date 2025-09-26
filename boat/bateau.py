@@ -21,4 +21,3 @@ class Bateau:
             if grille.matrice[l*grille.colonne+c] == "~":
                 return False
         return True
-    

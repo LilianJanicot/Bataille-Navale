@@ -14,3 +14,21 @@ class Grille:
         return monString
     def afficher(self):
         print(self)
+    def ajoute(self,bateau):
+        #vérification que je peux mettre un bateau
+        ajoutable=True
+        i=0
+        maListe=[]
+        while i!=len(self.matrice)//self.colonne:
+            for j in range(self.colonne):
+                maListe.append((i,j))
+            i+=1
+        for x in bateau.positions:
+            if x not in maListe:
+                ajoutable=False
+        if ajoutable:
+        #ajouter le bateau
+            for x in bateau.positions:
+                l,c=x
+                self.matrice[l*self.colonne+c]="⛵"
+        

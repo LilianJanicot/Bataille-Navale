@@ -14,3 +14,11 @@ class Bateau:
             else:
                 liste.append((self.ligne,self.colonne+i))
         return liste
+    
+    def coule(self,grille):
+        for x in self.positions:
+            l,c=x
+            if grille.matrice[l*grille.colonne+c] == "~":
+                return False
+        return True
+    

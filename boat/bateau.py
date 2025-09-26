@@ -21,3 +21,23 @@ class Bateau:
             if grille.matrice[l*grille.colonne+c] == "~":
                 return False
         return True
+
+class PortAvion(Bateau):
+    def __init__(self, ligne, colonne, vertical=False):
+        super().__init__(ligne, colonne, 4, vertical)
+        self.hit="🚢"
+
+class Croiseur(Bateau):
+    def __init__(self, ligne, colonne, vertical=False):
+        super().__init__(ligne, colonne, 3, vertical)
+        self.hit="⛴"
+
+class Torpilleur(Bateau):
+    def __init__(self, ligne, colonne, vertical=False):
+        super().__init__(ligne, colonne, 2, vertical)
+        self.hit="🚣"
+
+class Sousmarin(Bateau):
+    def __init__(self, ligne, colonne, vertical=False):
+        super().__init__(ligne, colonne, 2, vertical)
+        self.hit="🐟"

@@ -14,7 +14,7 @@ class Grille:
         return monString
     def afficher(self):
         print(self)
-    def ajoute(self,bateau):
+    def ajoute(self,bateau,hit="⛵"):
         #vérification que je peux mettre un bateau
         ajoutable=True
         i=0
@@ -30,5 +30,5 @@ class Grille:
         #ajouter le bateau
             for x in bateau.positions:
                 l,c=x
-                self.matrice[l*self.colonne+c]="⛵"
+                self.matrice[l*self.colonne+c]=hit
         

@@ -22,7 +22,7 @@ class Bateau:
                 return False
         return True
 
-class PortAvion(Bateau):
+class PorteAvion(Bateau):
     def __init__(self, ligne, colonne, vertical=False):
         super().__init__(ligne, colonne, 4, vertical)
         self.hit="🚢"

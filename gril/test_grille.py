@@ -25,3 +25,6 @@ def test_ajoute():
     monBateau1=Bateau(0,1,2,True)
     maGrille.ajoute(monBateau1)
     assert str(maGrille)=="~⛵~~\n~⛵~~\n"
+    monBateau2=Bateau(0,1,2)
+    maGrille.ajoute(monBateau2)
+    assert str(maGrille)=="~⛵~~\n~⛵~~\n"

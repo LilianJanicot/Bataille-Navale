@@ -14,7 +14,4 @@ def test_tirer():
 
 def test_afficher():
     maGrille=Grille(2,3)
-    assert maGrille.__str__=="~~~\n~~~"
-
-maGrille=Grille(2,3)
-print(maGrille.__str__)
+    assert str(maGrille)=="~~~\n~~~\n"

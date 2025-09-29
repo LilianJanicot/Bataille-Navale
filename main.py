@@ -37,6 +37,7 @@ while True:
     if ajout:
         break
 listeSymbole=["🚢","⛴","🚣","🐟"]
+score=0
 while not(monSousmarin.coule(grilleFront) and monCroiseur.coule(grilleFront) and monTorpilleur.coule(grilleFront) and monPorteAvion.coule(grilleFront)):
     grilleFront.afficher()
     entree = input("Entrez les coordonées séparées par un espace : ")
@@ -81,6 +82,6 @@ while not(monSousmarin.coule(grilleFront) and monCroiseur.coule(grilleFront) and
     else:
         grilleFront.tirer(l,c)
         print("Raté")
-
+        score+=1
 grilleFront.afficher()
-print("Tu as gagné!!")
+print("Tu as gagné!! Ton score est de ",score," tirs")
